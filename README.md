@@ -1,22 +1,32 @@
-# Simulado TOFAS — GitHub Pages
+# Simulado TOFAS — 1º Ano
 
-## Publicar no GitHub
+Simulado estático para GitHub Pages, com 30 questões em 3 níveis, pontuação máxima de 31 pontos e bloqueio antitrapaça.
 
-1. Crie um repositório novo no GitHub.
-2. Envie **todos os arquivos desta pasta** para a raiz do repositório.
-3. No repositório, abra **Settings > Pages**.
-4. Em **Build and deployment**, selecione **Deploy from a branch**.
-5. Escolha a branch `main`, pasta `/ (root)` e clique em **Save**.
-6. Aguarde o GitHub mostrar o endereço público.
+## Arquivos
 
-## Salvar os resultados no Google Planilhas
+- `index.html`: página principal
+- `style.css`: aparência responsiva
+- `questions.js`: banco com as 30 questões
+- `app.js`: funcionamento, pontuação e bloqueio
+- `config.js`: URL do coletor de resultados
+- `google-apps-script.gs`: coletor para o Google Planilhas
 
-1. Crie uma Planilha Google vazia e acesse **Extensões > Apps Script**.
-2. Cole no editor o conteúdo do arquivo `google-apps-script.gs`.
-3. Clique em **Implantar > Nova implantação > Aplicativo da Web**.
-4. Em “Executar como”, selecione **Eu**. Em “Quem pode acessar”, selecione **Qualquer pessoa**.
-5. Autorize e copie a URL terminada em `/exec`.
-6. Abra `config.js` e substitua `COLE_AQUI_A_URL_DO_APPS_SCRIPT` pela URL.
-7. Envie o `config.js` atualizado ao GitHub.
+## Publicar no GitHub Pages
 
-As respostas aparecerão automaticamente na aba **Resultados** da planilha.
+1. Envie os seis arquivos para a raiz do repositório.
+2. No GitHub, abra **Settings → Pages**.
+3. Em **Build and deployment**, selecione **Deploy from a branch**.
+4. Escolha a branch `main`, pasta `/ (root)` e salve.
+
+## Enviar resultados ao Google Planilhas
+
+1. Crie ou abra uma Planilha Google.
+2. Acesse **Extensões → Apps Script**.
+3. Cole o conteúdo de `google-apps-script.gs` e salve.
+4. Clique em **Implantar → Nova implantação → Aplicativo da Web**.
+5. Execute como você e permita acesso para qualquer pessoa com o link.
+6. Copie a URL terminada em `/exec` e cole entre as aspas de `config.js`.
+
+## Bloqueio antitrapaça
+
+Depois que a prova começa, clicar com o botão direito, trocar de aba, minimizar ou tirar o foco da janela bloqueia a tentativa. A tela exibe uma caveira central e registra o motivo na planilha, quando o coletor está configurado.
